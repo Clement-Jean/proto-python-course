@@ -53,7 +53,7 @@ def maps():
 def file(message):
     path = "simple.bin"
 
-    print("Read from file")
+    print("Write to file")
     print(message)
     with open(path, "wb") as f:
         bytes_as_str = message.SerializeToString()
