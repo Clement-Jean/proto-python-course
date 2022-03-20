@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package example.oneofs;
+
+message Result {
+  oneof result {
+    string message = 1;
+    uint32 id = 2;
+  }
+}
