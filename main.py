@@ -1,7 +1,7 @@
 from email import message
 import proto.simple_pb2 as simple_pb2
 import proto.complex_pb2 as complex_pb2
-import proto.enum_pb2 as enum_pb2
+import proto.enumerations_pb2 as enum_pb2
 import proto.oneofs_pb2 as oneofs_pb2
 import proto.maps_pb2 as maps_pb2
 
