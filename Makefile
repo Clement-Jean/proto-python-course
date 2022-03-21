@@ -1,4 +1,4 @@
-run: generate
+run: 	generate
 	python3 main.py
 
 generate:
