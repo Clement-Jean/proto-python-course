@@ -74,7 +74,7 @@ def json(message: simple_pb2.Simple):
     print(json_format.Parse(json_str, simple_pb2.Simple()))
 
 
-def main():
+if __name__ == "__main__":
     print(simple())
     # print(complex())
     # print(enum())
@@ -82,7 +82,3 @@ def main():
     # maps()
     # file(simple())
     # json(simple())
-
-
-if __name__ == "__main__":
-    main()
