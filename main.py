@@ -67,11 +67,20 @@ def file(message):
     print(message)
 
 
-def json(message: simple_pb2.Simple):
-    json_str = json_format.MessageToJson(message)
+def to_json(message):
+    return json_format.MessageToJson(
+        message,
+        indent=None,
+        preserving_proto_field_name=True
+    )
 
-    print(json_str)
-    print(json_format.Parse(json_str, simple_pb2.Simple()))
+
+def from_json(json_str, type):
+    return json_format.Parse(
+        json_str,
+        type(),
+        ignore_unknown_fields=True
+    )
 
 
 if __name__ == "__main__":
@@ -81,4 +90,7 @@ if __name__ == "__main__":
     # oneof()
     # maps()
     # file(simple())
-    # json(simple())
+    # json_str = to_json(complex())
+    # print(json_str)
+    # print(from_json(json_str, complex_pb2.Complex))
+    # print(from_json('{"id": 42, "unknown": "test"}', simple_pb2.Simple))
