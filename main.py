@@ -71,7 +71,7 @@ def to_json(message):
     return json_format.MessageToJson(
         message,
         indent=None,
-        preserving_proto_field_name=True
+        # preserving_proto_field_name=True
     )
 
 

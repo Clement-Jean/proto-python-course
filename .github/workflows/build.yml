@@ -29,6 +29,11 @@ jobs:
         with:
           version: '3.x'
 
+      - name: Setup venv
+        run: |
+          python -m venv venv
+          pip install -r requirements.txt
+
       - name: Build
         run: make
   build-unix:
@@ -47,6 +52,11 @@ jobs:
         uses: arduino/setup-protoc@v1
         with:
           version: '3.x'
+
+      - name: Setup venv
+        run: |
+          python -m venv venv
+          pip install -r requirements.txt
 
       - name: Build
         run: make
