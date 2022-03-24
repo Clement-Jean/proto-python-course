@@ -1,7 +1,7 @@
 BIN = proto-python-course
 PROTO_DIR = proto
 
-run: generate
+run: 	generate
 	python3 main.py
 
 generate:
