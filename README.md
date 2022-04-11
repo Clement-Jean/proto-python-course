@@ -1,6 +1,5 @@
 # proto-python-course
-
-[![Lint protobuf](https://github.com/Clement-Jean/proto-python-course/actions/workflows/lint.yml/badge.svg)](https://github.com/Clement-Jean/proto-python-course/actions/workflows/lint.yml)
+[![build main branch](https://github.com/Clement-Jean/proto-python-course/actions/workflows/build.yml/badge.svg)](https://github.com/Clement-Jean/proto-python-course/actions/workflows/build.yml) [![Lint protobuf](https://github.com/Clement-Jean/proto-python-course/actions/workflows/lint.yml/badge.svg)](https://github.com/Clement-Jean/proto-python-course/actions/workflows/lint.yml)
 
 ## Run
 
@@ -10,3 +9,5 @@ activate
 pip install -r requirements.txt
 python main.py 
 ```
+
+>>>>>>> 1431714b24e5c315fdd4de3c404ccbe4c47f9e42
