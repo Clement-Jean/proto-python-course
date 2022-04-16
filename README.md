@@ -9,5 +9,3 @@ activate
 pip install -r requirements.txt
 python main.py 
 ```
-
->>>>>>> 1431714b24e5c315fdd4de3c404ccbe4c47f9e42
