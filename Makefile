@@ -2,7 +2,7 @@ BIN_NAME = python3
 PROTO_DIR = proto
 
 ifeq ($(OS), Windows_NT)
-	BIN = ${BIN_NAME}.exe 
+	BIN = ${BIN_NAME}.exe
 else
 	BIN = ${BIN_NAME}
 endif
@@ -14,7 +14,8 @@ generate:
 	protoc -I${PROTO_DIR} --python_out=${PROTO_DIR} ${PROTO_DIR}/*.proto
 
 bump:
-	./venv/bin/python -m pip list -o --format columns | cut -d' ' -f1 | xargs -n1 ./venv/bin/python -m pip install -U
+	sed -i -e 's/==/>=/g' requirements.txt
+	./venv/bin/python -m pip install -r requirements.txt --upgrade
 	./venv/bin/python -m pip freeze > requirements.txt
 
 clean:
